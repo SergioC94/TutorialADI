@@ -1,0 +1,9 @@
+<p>lista de articulos</p>
+<ul>
+    <li *ngFor="let item of lista">
+    <span class="badge"><app-articulo [NOMBRE]="item.nombre"
+                                    [PRECIO]="item.precio"
+                        ></app-articulo>
+                    </span>
+    </li>
+</ul>
