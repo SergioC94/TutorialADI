@@ -10,7 +10,7 @@ const API_URL = 'http://localhost:3000';
 export class UserService {
   constructor(private http: HttpClient) { }
 
-  getPublicContent(): Observable<any> {
-    return this.http.get(API_URL + '/productos', { responseType: 'text' });
+  getProductos(): Observable<any> {
+    return this.http.get(API_URL + '/productos', { responseType: 'json' });
   }
 }

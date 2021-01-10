@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../_services/user.service';
 
 
 @Component({
@@ -12,14 +13,15 @@ export class ListaArticulosComponent implements OnInit {
   precio: string;
   lista: any[];
 
-  constructor() {  
-    this.nombre = "P1";
-    this.precio = "5"; 
-    this.lista=[
-    ];
+  constructor(private UserService: UserService) {  
+    this.nombre = "";
+    this.precio = ""; 
+    this.lista=[];
   }
 
   ngOnInit(): void {
+    this.UserService.getProductos().subscribe(
+      resultado =>  this.lista = resultado);
   }
 
 }
