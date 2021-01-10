@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { ListaArticulosComponent } from './lista-articulos/lista-articulos.component';
 import { RutaDosComponent } from './ruta-dos/ruta-dos.component';
 import { ArticuloComponent } from './articulo/articulo.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -13,10 +18,14 @@ import { ArticuloComponent } from './articulo/articulo.component';
     ListaArticulosComponent,
     RutaDosComponent,
     ArticuloComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
