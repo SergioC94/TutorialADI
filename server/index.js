@@ -69,7 +69,7 @@ function login(email,pass,success_select,error_callback) {
 
 app.post('/login', async function(pet, resp){
   var body = pet.body
-
+  console.log(body);
   try{
       login(body.EMAIL,body.PASSWORD,
         function(user){
@@ -84,8 +84,8 @@ app.post('/login', async function(pet, resp){
           },
 
         function(){
-        resp.status(401)
-        resp.send({mensaje:"Login incorrecto"}).end()
+          resp.status(401)
+          resp.send({mensaje:"Login incorrecto"}).end()
         })
   }catch{
     resp.status(500)
