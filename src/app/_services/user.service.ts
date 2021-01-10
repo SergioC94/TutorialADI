@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'http://localhost:3000';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ const API_URL = 'http://localhost:8000';
 export class UserService {
   constructor(private http: HttpClient) { }
 
-  getPublicContent(): Observable<any> {
-    return this.http.get(API_URL + '/productos', { responseType: 'text' });
+  getProductos(): Observable<any> {
+    return this.http.get(API_URL + '/productos', { responseType: 'json' });
   }
 }
