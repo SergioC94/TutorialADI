@@ -9,7 +9,6 @@ import { ArticuloComponent } from './articulo/articulo.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 
@@ -25,8 +24,7 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-
+    HttpClientModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
