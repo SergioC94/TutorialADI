@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "tutorialAdi"
+  "defaultProject": "tutorialAdi",
+  "cli": {
+    "analytics": "3f571ec3-fc64-4693-b5bb-a5f93e6b278b"
+  }
 }

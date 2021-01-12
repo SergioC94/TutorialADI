@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { ComponentNameComponent } from './component-name/component-name.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     ListaArticulosComponent,
     RutaDosComponent,
     ArticuloComponent,
-    LoginComponent
+    LoginComponent,
+    ComponentNameComponent
   ],
   imports: [
     BrowserModule,
