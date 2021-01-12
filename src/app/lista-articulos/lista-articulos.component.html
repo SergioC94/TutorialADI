@@ -1,9 +1,14 @@
-<p>lista de articulos</p>
-<ul>
-    <li *ngFor="let item of lista">
-    <span class="badge"><app-articulo [NOMBRE]="item.NOMBRE"
-                                    [PRECIO]="item.PRECIO"
-                        ></app-articulo>
-                    </span>
-    </li>
-</ul>
+<div class="container mt-4">
+    <h3 class="d-none d-sm-block">Lista de articulos</h3>
+    <h5 class="d-sm-none">Lista de articulos</h5>
+    <ul class="list-group list-group">
+        <li *ngFor="let item of lista" class="list-group-item">
+            <span class="badge">
+                <app-articulo [NOMBRE]="item.NOMBRE"
+                              [PRECIO]="item.PRECIO">
+                </app-articulo>
+            </span>
+        </li>
+      </ul>
+</div>
+
